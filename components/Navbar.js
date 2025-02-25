@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../assets/logo.png";
+import darkThemeLogo from "../assets/logo-logo.png";
 import themeIcon from "../assets/night-mode.png";
 import hamburgerIcon from "../assets/menu.png";
 import whiteHamburgerIcon from "../assets/menu-white.png";
@@ -46,7 +47,11 @@ const Navbar = ({ isDarkTheme, setIsDarkTheme }) => {
       >
         {/* Logo */}
         <Link href="#top">
-          <Image src={logo} alt="logo" className="w-28 cursor-pointer mr-14" />
+          <Image
+            src={isDarkTheme ? darkThemeLogo : logo}
+            alt="logo"
+            className="w-28 cursor-pointer mr-14"
+          />
         </Link>
 
         {/* Desktop Navigation */}

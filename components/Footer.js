@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import logo from "../assets/logo.png";
+import darkThemeLogo from "../assets/logo-logo.png";
 import mailIcon from "../assets/mail_icon.png";
 import darkMailIcon from "../assets/mail_icon_dark.png";
 
@@ -45,7 +46,7 @@ const Footer = ({ isDarkTheme }) => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
             <Image
-              src={logo}
+              src={isDarkTheme ? darkThemeLogo : logo}
               alt="Logo"
               className="w-28 mb-4 mx-auto md:mx-0"
             />
